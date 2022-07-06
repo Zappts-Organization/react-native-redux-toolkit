@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "redux-thunk-RN",
+    "slug": "redux-thunk-RN",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
