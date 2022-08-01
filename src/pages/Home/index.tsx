@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { StyleSheet, View, ActivityIndicator, FlatList } from 'react-native';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks/hooks';
 import Card from '../../components/Card';
-import { fetchDogs } from '../../redux/store/dogsThunks';
+import { fetchDogs } from '../../redux/features/dogs/dogsThunks';
 
 const Home = () => {
   const dispatch = useAppDispatch();

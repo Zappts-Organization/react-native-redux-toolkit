@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import getDogs from '../../service/dogs';
+import getDogs from '../../../service/dogs';
 
 export const fetchDogs = createAsyncThunk(
   'dogs/fetchDogs',

@@ -1,4 +1,4 @@
-import { DogData } from '../redux/store/type';
+import { DogData } from '../redux/features/dogs/type';
 import { api } from './api';
 
 async function getDogs(page: number) {
