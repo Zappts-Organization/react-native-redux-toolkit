@@ -1,11 +1,11 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { fetchDogs } from './dogsThunks';
-import { DogData } from './type';
+import { DogState } from './type';
 
 const dogsSlice = createSlice({
   name: 'dogs',
   initialState: {
-    breeds: [] as DogData[],
+    breeds: [] as DogState,
     loading: false,
   },
   reducers: {},
@@ -15,7 +15,7 @@ const dogsSlice = createSlice({
     });
     builder.addCase(
       fetchDogs.fulfilled,
-      (state, action: PayloadAction<DogData[]>) => {
+      (state, action: PayloadAction<DogState>) => {
         state.breeds = [...state.breeds, ...action.payload];
         state.loading = true;
       }

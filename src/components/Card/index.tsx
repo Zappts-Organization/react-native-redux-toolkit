@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
+import { DogObject } from '../../redux/features/dogs/type';
 
-const Card = ({ user }) => {
-  const { breeds } = user;
+const Card = ({ breeds, url }: DogObject) => {
   return (
     <View style={styles.card}>
       <View style={styles.cardHeader}>
@@ -17,7 +17,7 @@ const Card = ({ user }) => {
         </View>
       </View>
 
-      <Image style={styles.cardImage} source={{ uri: user.url }} />
+      <Image style={styles.cardImage} source={{ uri: url }} />
 
       <View style={styles.cardFooter}>
         <View style={styles.lifeSpanContainer}>

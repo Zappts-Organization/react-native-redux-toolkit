@@ -17,7 +17,9 @@ const Home = () => {
     <View style={{ flex: 1 }}>
       <FlatList
         data={breeds}
-        renderItem={({ item: user }) => <Card user={user} />}
+        renderItem={({ item: dog }) => (
+          <Card breeds={dog.breeds} url={dog.url} />
+        )}
         keyExtractor={(item) => item.id}
         ItemSeparatorComponent={() => {
           return <View style={styles.separator} />;
