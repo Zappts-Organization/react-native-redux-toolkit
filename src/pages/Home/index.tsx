@@ -11,7 +11,7 @@ const Home = () => {
   const { breeds, loading } = useAppSelector(getDogs);
 
   useEffect(() => {
-    dispatch(fetchDogs(0));
+    dispatch(fetchDogs(page));
   }, []);
 
   return (
