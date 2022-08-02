@@ -20,11 +20,10 @@ const Home = () => {
         renderItem={({ item: dog }) => (
           <Card breeds={dog.breeds} url={dog.url} />
         )}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(item) => item.id + Math.random()}
         ItemSeparatorComponent={() => {
           return <View style={styles.separator} />;
         }}
-        onEndReachedThreshold={0.5}
         onEndReached={() => {
           setPage(page + 1);
           dispatch(fetchDogs(page));
