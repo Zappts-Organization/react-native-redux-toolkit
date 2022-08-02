@@ -1,5 +1,5 @@
-import { DogState } from '../redux/features/dogs/type';
 import { api } from './api';
+import { DogState } from '../redux/features/dogs/type';
 
 async function getDogs(page: number) {
   try {
