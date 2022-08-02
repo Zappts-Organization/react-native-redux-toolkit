@@ -24,6 +24,7 @@ const Home = () => {
         ItemSeparatorComponent={() => {
           return <View style={styles.separator} />;
         }}
+        onEndReachedThreshold={0.5}
         onEndReached={() => {
           setPage(page + 1);
           dispatch(fetchDogs(page));

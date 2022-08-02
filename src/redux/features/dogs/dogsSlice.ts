@@ -11,13 +11,13 @@ const dogsSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(fetchDogs.pending, (state) => {
-      state.loading = false;
+      state.loading = true;
     });
     builder.addCase(
       fetchDogs.fulfilled,
       (state, action: PayloadAction<DogState>) => {
         state.breeds = [...state.breeds, ...action.payload];
-        state.loading = true;
+        state.loading = false;
       }
     );
     builder.addCase(fetchDogs.rejected, (state) => {
