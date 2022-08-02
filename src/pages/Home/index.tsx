@@ -3,14 +3,15 @@ import { StyleSheet, View, ActivityIndicator, FlatList } from 'react-native';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks/hooks';
 import Card from '../../components/Card';
 import { fetchDogs } from '../../redux/features/dogs/dogsThunks';
+import { getDogs } from '../../redux/features/dogs/dogsSelector';
 
 const Home = () => {
   const dispatch = useAppDispatch();
   const [page, setPage] = useState(0);
-  const { breeds, loading } = useAppSelector((state) => state.dogs);
+  const { breeds, loading } = useAppSelector(getDogs);
 
   useEffect(() => {
-    dispatch(fetchDogs(page));
+    dispatch(fetchDogs(0));
   }, []);
 
   return (

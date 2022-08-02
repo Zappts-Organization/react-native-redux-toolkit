@@ -4,7 +4,7 @@ import { api } from './api';
 async function getDogs(page: number) {
   try {
     const { data } = await api.get<DogState>(
-      `images/search?limit=20&page=${page}`
+      `images/search?limit=10&page=${page}`
     );
     return data;
   } catch (error) {
