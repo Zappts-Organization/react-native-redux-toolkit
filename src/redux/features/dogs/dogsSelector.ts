@@ -1,3 +1,6 @@
+import { createSelector } from '@reduxjs/toolkit';
 import { RootState } from '../../store';
 
-export const getDogs = (state: RootState) => state.dogs;
+const getDogsSelector = (state: RootState) => state;
+
+export const getDogs = createSelector(getDogsSelector, (state) => state.dogs);
